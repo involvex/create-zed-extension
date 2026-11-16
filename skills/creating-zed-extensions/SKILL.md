@@ -54,15 +54,15 @@ skills add involvex/create-zed-extension -s creating-zed-extensions
 
 One primary kind per extension when publishing (language + its LSP is the allowed combo).
 
-| Kind | Id convention | Rust required? |
-| --- | --- | --- |
-| Theme | `*-theme` | No |
-| Icon theme | `*-icon-theme` or `*-icons` | No |
-| Snippets | `*-snippets` (if snippets-only) | No |
-| Language | language name-like id | No (forbid Rust unless also shipping LSP) |
-| Language server | `*-language-server` or `*-lsp` | Yes |
-| Debugger | `*-debugger` | Yes |
-| MCP server | `mcp-server-*` or `*-mcp-server` | Yes |
+| Kind            | Id convention                    | Rust required?                            |
+| --------------- | -------------------------------- | ----------------------------------------- |
+| Theme           | `*-theme`                        | No                                        |
+| Icon theme      | `*-icon-theme` or `*-icons`      | No                                        |
+| Snippets        | `*-snippets` (if snippets-only)  | No                                        |
+| Language        | language name-like id            | No (forbid Rust unless also shipping LSP) |
+| Language server | `*-language-server` or `*-lsp`   | Yes                                       |
+| Debugger        | `*-debugger`                     | Yes                                       |
+| MCP server      | `mcp-server-*` or `*-mcp-server` | Yes                                       |
 
 Id must be kebab-case, unique, and must **not** contain `zed` or `extension`.
 
@@ -194,14 +194,14 @@ WASM caveats: prefer `zed::current_platform` and `Worktree` (`which`, `shell_env
 
 ## Common mistakes
 
-| Mistake | Fix |
-| --- | --- |
-| Slash commands / agent servers | Rejected — use MCP / ACP registry |
-| Rust in a language-only extension | Remove Cargo.toml / src |
-| Bundled LSP / DAP / MCP binary | Download or `which` at runtime |
-| Wrong WASM target docs | Use `wasm32-wasip2` |
-| Id contains `zed` or `extension` | Rename |
-| Missing LICENSE | Add an allowed license file |
+| Mistake                           | Fix                               |
+| --------------------------------- | --------------------------------- |
+| Slash commands / agent servers    | Rejected — use MCP / ACP registry |
+| Rust in a language-only extension | Remove Cargo.toml / src           |
+| Bundled LSP / DAP / MCP binary    | Download or `which` at runtime    |
+| Wrong WASM target docs            | Use `wasm32-wasip2`               |
+| Id contains `zed` or `extension`  | Rename                            |
+| Missing LICENSE                   | Add an allowed license file       |
 
 ## References
 
