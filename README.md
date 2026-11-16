@@ -45,6 +45,16 @@ npx create-zed-extension ./midnight-theme \
 2. Run **Install Dev Extension**.
 3. Select the generated directory.
 
+## Agent skill (skills CLI)
+
+This repo ships a `creating-zed-extensions` skill for coding agents, keyed off the official docs at [zed-industries/zed/docs/src/extensions](https://github.com/zed-industries/zed/tree/main/docs/src/extensions).
+
+```bash
+npx skills add involvex/create-zed-extension --skill creating-zed-extensions
+# or
+skills add involvex/create-zed-extension -s creating-zed-extensions
+```
+
 ## Develop this CLI
 
 ```bash
